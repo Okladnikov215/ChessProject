@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C3B0238-E615-44B9-928A-22CADE5D29CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChessUI</RootNamespace>
+    <AssemblyName>ChessUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbbishop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbknight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbpawn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbqueen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbrook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bempty.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bfigures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bhorizontalbacklight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bverticalbacklight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwbishop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwknight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwpawn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwqueen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bwrook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghorizontalbacklight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gverticalbacklight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rhorizontalbacklight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rverticalbacklight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wbbishop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wbking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wbknight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wbpawn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wbqueen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wbrook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wempty.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wfigures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwbishop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwknight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwpawn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwqueen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wwrook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessGameInterface\ChessGameInterface.csproj">
+      <Project>{51d26596-8fb1-46de-ac1a-f74b2c57ea52}</Project>
+      <Name>ChessGameInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessUIInterface\ChessUIInterface.csproj">
+      <Project>{060b50ae-1d98-49d9-bfda-6f2db3708a11}</Project>
+      <Name>ChessUIInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessUILogic\ChessUILogic.csproj">
+      <Project>{2b3ae463-e3d5-4ba1-9aa9-3e505e2b6761}</Project>
+      <Name>ChessUILogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameControls\GameControls.csproj">
+      <Project>{eb5fbfbe-a6e0-4b5f-8519-ed6b03c3702e}</Project>
+      <Name>GameControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3381C836-2D5D-45B2-AD7B-A512CF123EC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ChessGameFactory</RootNamespace>
+    <AssemblyName>ChessGameFactory</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessConnection\ChessConnection.csproj">
+      <Project>{901cee7b-c3ef-4c4b-bdb6-1bee9b2a734c}</Project>
+      <Name>ChessConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessGameInterface\ChessGameInterface.csproj">
+      <Project>{51d26596-8fb1-46de-ac1a-f74b2c57ea52}</Project>
+      <Name>ChessGameInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessGame\ChessGame.csproj">
+      <Project>{2e163a93-afd0-4f38-9759-864ef7aedb44}</Project>
+      <Name>ChessGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectionInterface\ConnectionInterface.csproj">
+      <Project>{43bb9c02-03ef-4a17-92c9-b81f48f34951}</Project>
+      <Name>ConnectionInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RemoteChessGame\RemoteChessGame.csproj">
+      <Project>{57b17ef9-4fb9-4631-aae4-0ec69d55f52d}</Project>
+      <Name>RemoteChessGame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
